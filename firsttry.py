@@ -5,12 +5,20 @@ import os
 def get_aspect(im):
     x, y = im.size
     if x > y:
-        aspect = 'landscape'
+        return 'landscape'
     elif y > x:
-        aspect = 'portrait'
+        return 'portrait'
     else:
-        aspect = 'square'
-    return aspect
+        return 'square'
+
+
+def get_longest_side(aspect):
+    if aspect == 'portrait':
+        return 'y'
+    elif aspect == 'landscape':
+        return 'x'
+    else:
+        return 'x'
 
 
 for f in os.listdir('input'):
@@ -21,6 +29,10 @@ for f in os.listdir('input'):
 
     aspect = get_aspect(im)
     print(f'{aspect}')
+
+    longest_side = get_longest_side(aspect)
+    print(f'longest_side: {longest_side}')
+
 
 # 800x600
 # jpg, avi
