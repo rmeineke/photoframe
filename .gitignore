@@ -102,7 +102,10 @@ venv.bak/
 
 # mypy
 .mypy_cache/
-####################3
+####################
 /input
 /output
+/resized
 .idea/
+*.png
+*.pl
