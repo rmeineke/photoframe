@@ -1,3 +1,5 @@
+# chk for the various directories...
+
 import os
 
 from pic import Pic
